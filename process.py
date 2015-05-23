@@ -33,10 +33,8 @@ def make_conn(db_auth, db_user, db_pass, db_host=None):
                 Collection within MongoDB that holds the scraped news stories.
 
     """
-    if db_host:
-        client = MongoClient(db_host)
-    else:
-        client = MongoClient()
+    client = MongoClient(host=os.environ['MONGO_INSTANCE_PORT_27017_TCP_ADDR'],
+                         port=27017)
     if db_auth:
         client[db_auth].authenticate(db_user, db_pass)
     database = client.event_scrape
