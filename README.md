@@ -1,6 +1,11 @@
 stanford_pipeline
 =================
 
+This is a fork of the OEDA
+[stanford_pipeline](https://github.com/openeventdata/stanford_pipeline).
+Its altered to work with 
+[phox_compose](https://github.com/chilland/phox_compose).
+
 Program to run scraped news stories through Stanford's CoreNLP program.
 
 The program pulls stories added to the database within the past day and that
